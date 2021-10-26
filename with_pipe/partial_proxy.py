@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 
 @dataclass
 class PartialProxy:
-    path: list[typing.Callable] = field(default_factory=list)
+    path: typing.List[typing.Callable] = field(default_factory=list)
 
     def _then(self, call: typing.Callable) -> "PartialProxy":
         """
