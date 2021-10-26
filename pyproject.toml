@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "withpipeinspect"
+name = "with_pipe"
 version = "0.1.0"
 description = ""
 authors = ["Michael Milton <ttmigueltt@gmail.com>"]

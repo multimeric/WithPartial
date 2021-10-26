@@ -7,7 +7,7 @@ Here's a contrived example from the test suite:
 
 ```python
 import numpy as np
-from with_pipe.pipe_context import PipeContext
+from with_pipe import PipeContext
 from pipetools import pipe
 
 with PipeContext() as _:
@@ -50,6 +50,6 @@ Note: you will need [poetry](https://python-poetry.org/docs/pyproject/) installe
 ```bash
 git clone https://github.com/multimeric/WithPipe.git
 cd WithPipe
-poetry install
-pytest test/
+poetry install --extras pipetools
+poetry run pytest test/
 ```
