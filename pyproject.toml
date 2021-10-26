@@ -5,12 +5,13 @@ description = ""
 authors = ["Michael Milton <ttmigueltt@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.7,<3.11"
 pipetools = {version = "^1.0.1", optional = true}
 addict = "^2.4.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
+numpy = "^1.21.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

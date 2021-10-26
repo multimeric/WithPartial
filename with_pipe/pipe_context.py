@@ -36,7 +36,7 @@ class PipeContext:
         # instantiation time, use those. Otherwise get them using inspect
         if self.frame is None:
             stack = inspect.stack(context=0)
-            locs = addict.Dict(stack[1].frame.f_locals)
+            locs = addict.Dict(__builtins__, stack[1].frame.f_locals)
             del stack
         else:
             locs = self.frame
