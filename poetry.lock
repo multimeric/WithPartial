@@ -65,8 +65,8 @@ python-versions = "*"
 name = "numpy"
 version = "1.21.3"
 description = "NumPy is the fundamental package for array computing with Python."
-category = "main"
-optional = true
+category = "dev"
+optional = false
 python-versions = ">=3.7,<3.11"
 
 [[package]]
@@ -178,7 +178,7 @@ pipetools = ["pipetools"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7,<3.11"
-content-hash = "5e2ca02db21b7383f3294bf00b32df7e082fa6364fa6c303726c8207a1ab047e"
+content-hash = "d4c64ced490646d21569be5c9b6b2f38a1f2796c51bd501ca42da8ba395cc2e4"
 
 [metadata.files]
 addict = [
