@@ -42,3 +42,14 @@ Then, using the return value of the context manager, which we have named `_` (bu
 You can use positional and keyword arguments at this point if you need
 
 For more usage information, refer to the [test suite](https://github.com/multimeric/WithPipe/tree/master/test).
+
+## Tests
+
+Note: you will need [poetry](https://python-poetry.org/docs/pyproject/) installed.
+
+```bash
+git clone https://github.com/multimeric/WithPipe.git
+cd WithPipe
+poetry install
+pytest test/
+```
