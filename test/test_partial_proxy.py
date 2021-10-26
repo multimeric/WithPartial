@@ -10,14 +10,8 @@ def dict_to_nt(d: dict, name="tup") -> typing.NamedTuple:
 
 
 def test_proxy():
-    obj = {
-        'a': {
-            'b': dict_to_nt({
-                'c': None
-            })
-        }
-    }
-    p = PartialProxy()['a']['b'].c
+    obj = {"a": {"b": dict_to_nt({"c": None})}}
+    p = PartialProxy()["a"]["b"].c
     assert len(p.path) == 3
     assert isinstance(p.path[0], operator.itemgetter)
     assert isinstance(p.path[1], operator.itemgetter)

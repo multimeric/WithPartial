@@ -7,12 +7,12 @@ from dataclasses import dataclass, field
 class PartialProxy:
     path: list[typing.Callable] = field(default_factory=list)
 
-    def _then(self, call: typing.Callable) -> 'PartialProxy':
+    def _then(self, call: typing.Callable) -> "PartialProxy":
         """
         Return a copy of the current proxy, but with a new operation at the end
         :param call: A callable representing this last action
         """
-        kwargs = {**self.__dict__, 'path': self.path + [call]}
+        kwargs = {**self.__dict__, "path": self.path + [call]}
         return self.__class__(**kwargs)
 
     def eval(self, frame: dict) -> typing.Callable:

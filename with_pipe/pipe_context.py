@@ -7,16 +7,19 @@ import typing
 from functools import partial
 import addict
 
+
 @dataclass()
 class _CallPartialProxy(PartialProxy):
     """
     A slightly modified proxy that, when called() will forward its arguments
     and itself to a hook function
     """
+
     call_hook: typing.Callable = lambda *args, **kwargs: None
 
     def __call__(self, *args, **kwargs):
         return self.call_hook(self, *args, **kwargs)
+
 
 class PipeContext:
     def __init__(self, globs: dict = None, locs: dict = None):
@@ -54,10 +57,3 @@ class PipeContext:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         pass
-
-    # def __getattr__(self, item):
-    #     # This is an exception to normal behaviour, because you access the pipe
-    #     # object using attribute access (ie the dot), but it is proxied onto a
-    #     # dict, so we have to use itemgetter
-    #     return
-
