@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "with_partial"
 version = "0.1.0"
-description = ""
-authors = ["Michael Milton <ttmigueltt@gmail.com>"]
+description = "A utility for functional piping in Python that allows you to access any function in any scope as a partial."
+authors = ["Michael Milton <michael.r.milton@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.7,<3.11"

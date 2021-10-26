@@ -7,10 +7,10 @@ Here's a contrived example from the test suite:
 
 ```python
 import numpy as np
-from with_partial import PipeContext
+from with_partial import PartialContext
 from pipetools import pipe
 
-with PipeContext() as _:
+with PartialContext() as _:
     ret = (
             10 > pipe |
             _.np.ones() |
@@ -25,7 +25,7 @@ As you can see, we were able to call both `numpy` and built-in functions on the 
 
 ## Installation
 ```bash
-pip install git+https://github.com/multimeric/WithPartial.git
+pip install with_partial
 ```
 
 ## Usage

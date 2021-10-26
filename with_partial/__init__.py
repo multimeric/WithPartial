@@ -1,1 +1,1 @@
-from with_partial.pipe_context import PipeContext
+from with_partial.pipe_context import PartialContext

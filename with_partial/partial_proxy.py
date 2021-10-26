@@ -5,6 +5,10 @@ from dataclasses import dataclass, field
 
 @dataclass
 class PartialProxy:
+    """
+    A generic class that captures all the getattr (ie a.b) and getitem
+    (ie a["b"]) calls on it
+    """
     path: typing.List[typing.Callable] = field(default_factory=list)
 
     def _then(self, call: typing.Callable) -> "PartialProxy":

@@ -2,7 +2,6 @@ import inspect
 from dataclasses import dataclass
 
 from with_partial.partial_proxy import PartialProxy
-import operator
 import typing
 from functools import partial
 import addict
@@ -21,7 +20,10 @@ class _CallPartialProxy(PartialProxy):
         return self.call_hook(self, *args, **kwargs)
 
 
-class PipeContext:
+class PartialContext:
+    """
+    A context manager class for accessing functions as partials
+    """
     def __init__(self, globs: dict = None, locs: dict = None):
         # Store the locals and globals dictionaries if provided
         if globs is not None or locs is not None:
@@ -34,7 +36,6 @@ class PipeContext:
             self.frame.update(locs)
 
     def __enter__(self):
-
         # We first get the frame local variables. If they were provided at
         # instantiation time, use those. Otherwise get them using inspect
         if self.frame is None:
