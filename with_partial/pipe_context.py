@@ -1,7 +1,7 @@
 import inspect
 from dataclasses import dataclass
 
-from with_pipe.partial_proxy import PartialProxy
+from with_partial.partial_proxy import PartialProxy
 import operator
 import typing
 from functools import partial

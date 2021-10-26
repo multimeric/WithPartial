@@ -2,7 +2,7 @@ import operator
 import typing
 from collections import namedtuple
 
-from with_pipe.partial_proxy import PartialProxy
+from with_partial.partial_proxy import PartialProxy
 
 
 def dict_to_nt(d: dict, name="tup") -> typing.NamedTuple:

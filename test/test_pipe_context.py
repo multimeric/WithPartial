@@ -1,4 +1,4 @@
-from with_pipe.pipe_context import PipeContext
+from with_partial.pipe_context import PipeContext
 
 
 def test_pipe_context_local():
